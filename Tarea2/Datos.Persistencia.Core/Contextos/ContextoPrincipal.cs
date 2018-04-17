@@ -7,7 +7,7 @@ namespace Datos.Persistencia.Core{
 
         public ContextoPrincipal() : base("DefaultConnnection") { }//End construct
 
-        //Atributo
+        //Atributo   
         IDbSet<Administrador> _Administrador;
 
         //Propiedad
