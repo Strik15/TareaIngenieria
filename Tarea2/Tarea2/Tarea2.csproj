@@ -117,7 +117,8 @@
     <Folder Include="1. Presentacion\" />
     <Folder Include="2. Aplicacion\" />
     <Folder Include="3. Dominio\" />
-    <Folder Include="4. Infraestructura\" />
+    <Folder Include="4. Infraestructura\4.1 Datos\" />
+    <Folder Include="4. Infraestructura\4.2 Transversal\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
