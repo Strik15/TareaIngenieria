@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Utilitarios.IoC;
 
 namespace Tarea_2
 {
@@ -16,6 +17,11 @@ namespace Tarea_2
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var unityContainer = Bootstrapper.Initialize();
+            ModuleLoader.LoadContainer(unityContainer, ".\\bin", "Datos.Persistencia.Implementacion.dll");
+            ModuleLoader.LoadContainer(unityContainer, ".\\bin", "Aplicacion.Implementacion.dll");
+            MapperInitializer.CongifurarMapeos();
         }
     }
 }

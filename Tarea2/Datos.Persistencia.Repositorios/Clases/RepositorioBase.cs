@@ -5,7 +5,7 @@ using Dominio.Core;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Datos.Persistencia.Repositorios.Clases{
+namespace Datos.Persistencia.Repositorios{
     public class RepositorioBase<Entidad> : IRepositorioBase<Entidad> where Entidad: class{
         readonly IContextoUnidadDeTrabajo _unidadDeTrabajo;
 

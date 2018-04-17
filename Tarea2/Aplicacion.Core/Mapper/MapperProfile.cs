@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Dominio.Core;
 
 namespace Aplicacion.Core{
-    class MapperProfile{
+    public class MapperProfile : Profile{
 
-    }
-}
+        public MapperProfile() {
+            CreateMap<Administrador, AdministradorDTO>();
+            CreateMap<AdministradorDTO, Administrador>();
+        }//End constructor
+
+    }//End class MapperProfile : Profile
+}//End namespace Aplicacion.Core

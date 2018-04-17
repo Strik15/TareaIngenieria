@@ -51,9 +51,13 @@
   <ItemGroup>
     <Compile Include="Contextos\ContextoPrincipal.cs" />
     <Compile Include="Contratos\IContextoUnidadDeTrabajo.cs" />
+    <Compile Include="Migrations\201804172237502_inicial.cs" />
+    <Compile Include="Migrations\201804172237502_inicial.Designer.cs">
+      <DependentUpon>201804172237502_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Dominio.Core\Dominio.Core.csproj">
       <Project>{02b6d51b-a51c-4c3b-a055-edbd06b2ba34}</Project>
@@ -63,6 +67,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804172237502_inicial.resx">
+      <DependentUpon>201804172237502_inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

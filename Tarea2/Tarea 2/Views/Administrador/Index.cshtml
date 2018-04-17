@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Aplicacion.Core.AdministradorDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministradorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministradorNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministradorContrasenna)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministradorCorreo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministradorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministradorNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministradorContrasenna)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministradorCorreo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

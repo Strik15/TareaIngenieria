@@ -30,8 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,11 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\AdministradorServicio.cs" />
+    <Compile Include="Init\ModuleInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Clases\" />
-    <Folder Include="Init\" />
+    <ProjectReference Include="..\Aplicacion.Contrato\Aplicacion.Contrato.csproj">
+      <Project>{04073d21-4675-439d-b4d5-b660620b105f}</Project>
+      <Name>Aplicacion.Contrato</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aplicacion.Core\Aplicacion.Core.csproj">
+      <Project>{c974b6f2-505b-4621-ac86-95b67b90c11b}</Project>
+      <Name>Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datos.Persistencia.Core\Datos.Persistencia.Core.csproj">
+      <Project>{6018fa0e-0331-4625-b4b2-1a199363c720}</Project>
+      <Name>Datos.Persistencia.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio.Contratos\Dominio.Contratos.csproj">
+      <Project>{61fc727f-6ed0-4b19-8c32-408ebe50f84f}</Project>
+      <Name>Dominio.Contratos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio.Core\Dominio.Core.csproj">
+      <Project>{02b6d51b-a51c-4c3b-a055-edbd06b2ba34}</Project>
+      <Name>Dominio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitarios.IoC\Utilitarios.IoC.csproj">
+      <Project>{7ca4ac48-9dac-4f7f-a4f0-9f940aefc1c1}</Project>
+      <Name>Utilitarios.IoC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

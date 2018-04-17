@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aplicacion
+﻿using Aplicacion.Core;
+using AutoMapper;
 
 namespace Utilitarios.IoC{
-    class MapperInitializer {
+    public sealed class MapperInitializer {
+        public static void CongifurarMapeos() {
+
+            Mapper.Initialize(map => {
+                map.AddProfile<MapperProfile>();
+                }
+            );
+
+        }
 
     }
 }
