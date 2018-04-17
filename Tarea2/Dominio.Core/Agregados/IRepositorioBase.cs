@@ -5,13 +5,15 @@ using System.Linq.Expressions;
 namespace Dominio.Core{
     public interface IRepositorioBase<Entidad> : IDisposable{
 
-        IUnidadDeTrabajocs UnidaadDeTrabajo{ get; }
+        IUnidadDeTrabajocs UnidadDeTrabajo{ get; }
 
         Entidad Obtener(int id); //Select * FROM ADministrador WHERE ID = ID
 
         IEnumerable<Entidad> ObtenerTodas();
 
-        IEnumerable<Entidad> BuscarSingleOrDefault(Expression<Func<Entidad, bool>>predicado);
+        IEnumerable<Entidad> Buscar(Expression<Func<Entidad, bool>>predicado);
+
+        Entidad BuscarSingleOrDefault(Expression<Func<Entidad, bool>> predicado);
 
         void Agregar(Entidad entidad);
 

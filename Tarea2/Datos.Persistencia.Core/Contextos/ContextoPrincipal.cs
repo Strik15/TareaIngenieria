@@ -29,6 +29,17 @@ namespace Datos.Persistencia.Core{
             Entry(item).State = EntityState.Modified;
         }//End SetModified<Entidad>(Entidad item) where Entidad : class
 
+        public int Completar() {
+            return base.SaveChanges();
+        }//End Completar() 
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder){
+            Configuration.LazyLoadingEnabled = false;
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+        }//End  OnModelCreating(DbModelBuilder modelBuilder)
+
     }//End class ContextoPrincipal : DbContext, IContextoUnidadDeTrabajo
 
 }//End namespace Datos.Persistencia.Core
