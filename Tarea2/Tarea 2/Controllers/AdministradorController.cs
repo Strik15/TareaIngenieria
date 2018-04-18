@@ -26,12 +26,26 @@ namespace Tarea_2.Controllers
             var lista = _administradorServicio.ObtenerTodas();
             return View(lista);
         }
-
-        public ActionResult Agregar()
+        [HttpPost]
+        public ActionResult Agregar(int id, string nombre, string contra, string correo)
         {
-            AdministradorDTO ad = new AdministradorDTO();            
-            var lista = _administradorServicio.ObtenerTodas();
-            return View(lista);
+            AdministradorDTO ad = new AdministradorDTO();
+            ad.AdministradorId = id;
+            ad.AdministradorNombre = nombre;
+            ad.AdministradorContrasenna = contra;
+            ad.AdministradorCorreo = correo;
+
+            bool res = _administradorServicio.Agregar(ad);
+
+            ViewBag.Title = "Insertar Administrador";
+
+            if (res) {
+                ViewBag.Message = "Se ha realizado la insercion";
+            }else
+                ViewBag.Message = "No se ha realizado la insercion";
+
+            //var lista = _administradorServicio.ObtenerTodas();
+            return View();
         }
 
         // GET: Administrador/Details/5
