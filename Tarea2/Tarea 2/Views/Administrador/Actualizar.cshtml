@@ -1,0 +1,29 @@
+﻿@model Aplicacion.Core.AdministradorDTO
+
+@{
+    ViewBag.Title = "Actualiza";
+}
+
+<h2>Actualiar</h2>
+<div class="contact-form">
+    <form action="/Administrador/Agregar" method="post">
+        <center>
+            <h4>Id:</h4>
+            <input type="number" id="id" name="id" required="">
+            <br>
+            <h4>Nombre:</h4>
+            <input type="text" id="nombre" name="nombre" required="">
+            <br>
+            <h4>Contraseña:</h4>
+            <input type="text" id="contra" name="contra" required="">
+            <br>
+            <h4>Correo:</h4>
+            <input type="text" id="correo" name="correo" required="">
+            <br>
+            <input type="submit" value="Insertar" />
+            <br /><br /><br />
+            <h4>@ViewBag.Message</h4>
+        </center>
+    </form>
+</div>
+

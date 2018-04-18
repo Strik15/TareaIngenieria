@@ -45,7 +45,7 @@ namespace Tarea_2.Controllers
                 ViewBag.Message = "No se ha realizado la insercion";
 
             //var lista = _administradorServicio.ObtenerTodas();
-            return View();
+            return RedirectToAction("Index");
         }
 
         // GET: Administrador/Details/5
@@ -74,6 +74,14 @@ namespace Tarea_2.Controllers
             {
                 return View();
             }
+        }
+
+        
+        public ActionResult Actualizar()
+        {
+            
+                return View();
+            
         }
 
         // GET: Administrador/Edit/5
