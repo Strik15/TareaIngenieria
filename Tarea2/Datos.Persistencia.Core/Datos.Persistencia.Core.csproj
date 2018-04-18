@@ -51,9 +51,9 @@
   <ItemGroup>
     <Compile Include="Contextos\ContextoPrincipal.cs" />
     <Compile Include="Contratos\IContextoUnidadDeTrabajo.cs" />
-    <Compile Include="Migrations\201804172237502_inicial.cs" />
-    <Compile Include="Migrations\201804172237502_inicial.Designer.cs">
-      <DependentUpon>201804172237502_inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201804180037259_inicial.cs" />
+    <Compile Include="Migrations\201804180037259_inicial.Designer.cs">
+      <DependentUpon>201804180037259_inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,8 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804172237502_inicial.resx">
-      <DependentUpon>201804172237502_inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804180037259_inicial.resx">
+      <DependentUpon>201804180037259_inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

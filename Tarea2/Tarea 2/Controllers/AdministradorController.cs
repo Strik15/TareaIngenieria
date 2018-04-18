@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Aplicacion.Contrato;
+using Aplicacion.Core;
+
 namespace Tarea_2.Controllers
 {
     public class AdministradorController : Controller
@@ -21,6 +23,13 @@ namespace Tarea_2.Controllers
         // GET: Administrador
         public ActionResult Index()
         {
+            var lista = _administradorServicio.ObtenerTodas();
+            return View(lista);
+        }
+
+        public ActionResult Agregar()
+        {
+            AdministradorDTO ad = new AdministradorDTO();            
             var lista = _administradorServicio.ObtenerTodas();
             return View(lista);
         }

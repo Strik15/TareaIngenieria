@@ -5,7 +5,7 @@ using Dominio.Core;
 namespace Datos.Persistencia.Core{
     public class ContextoPrincipal : DbContext, IContextoUnidadDeTrabajo{
 
-        public ContextoPrincipal() : base("DefaultConnnection") { }//End construct
+        public ContextoPrincipal() : base("Tarea_2_Ing_b41250") { }//End construct
 
         //Atributo   
         IDbSet<Administrador> _Administrador;
